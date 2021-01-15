@@ -4,19 +4,19 @@
 // (3) Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 
 // ****** Prima parte *****
-// Creare un oggetto con delle proprietà.
+// 1) Creare un oggetto con delle proprietà.
 var studente = {
   nome : 'Federico',
   cognome : 'Rossi',
   eta : 26
 };
-// Stampare tutte le proprietà.
+// 2) Stampare tutte le proprietà dell'oggetto.
 for (var key in studente) {
   // console.log(studente[key]);
 }
 
 // ****** Seconda parte *****
-// Creare un array di oggetti.
+// 1) Creare un array di oggetti.
 var studenti = [
   {
     nome : 'Federico',
@@ -35,14 +35,32 @@ var studenti = [
   }
 ];
 
-// Stampare nome e cognome di ognuno.
+// 2) Stampare nome e cognome di ognuno.
 for (var i = 0; i < studenti.length; i++) {
   // console.log(studenti[i].nome);
   // console.log(studenti[i].cognome);
 }
 
 // ****** Terza parte *****
-// Inserire i prompt
+// 1) Inserire i prompt da chiedere all'utente.
 var nome = prompt('Inserisci il nome:');
 var cognome = prompt('Inserisci il cognome:');
-var eta = prompt('Inserisci l\'età:');
+var eta = parseInt(prompt('Inserisci l\'età:'));
+
+// 2) Aggiungere un nuovo oggetto dentro l'array studenti.
+// PRIMO METODO: pusho direttamente l'oggetto creato dentro l'array.
+studenti.push({
+  nome : nome,
+  cognome : cognome,
+  eta : eta
+});
+
+// SECONDO METODO: creo una variabile dentro la quale inserisco il nuovo oggetto. Dopo pusho la variabile dentro l'array.
+// var nuovoOggetto = {
+//   nome : nome,
+//   cognome : cognome,
+//   eta : eta
+// };
+// studenti.push(nuovoOggetto);
+
+console.log(studenti);
