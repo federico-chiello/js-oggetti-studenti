@@ -37,6 +37,12 @@ var studenti = [
 
 // Stampare nome e cognome di ognuno.
 for (var i = 0; i < studenti.length; i++) {
-  console.log(studenti[i].nome);
-  console.log(studenti[i].cognome);
+  // console.log(studenti[i].nome);
+  // console.log(studenti[i].cognome);
 }
+
+// ****** Terza parte *****
+// Inserire i prompt
+var nome = prompt('Inserisci il nome:');
+var cognome = prompt('Inserisci il cognome:');
+var eta = prompt('Inserisci l\'età:');
